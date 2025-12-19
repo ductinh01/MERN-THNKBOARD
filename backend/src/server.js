@@ -7,6 +7,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5001;
+app.use(express.json());
 //an endpoint is a combibation of a URL + HTPP method that lets the client
 // interact with a specific resource.
 app.use("/api/notes", notesRoutes);
